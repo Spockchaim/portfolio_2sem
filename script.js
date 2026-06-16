@@ -12,23 +12,78 @@ const PORTFOLIO_DATA = {
       category: "Back-End & Engenharia de Dados",
       icon: "bi bi-database",
       items: [
-        { name: "Python (FastAPI / Flask / Pandas)", level: "90%", icon: "devicon-python-plain" },
-        { name: "Java (Fundamentals / Foundations)", level: "85%", icon: "devicon-java-plain" },
-        { name: "Kotlin (Android Development)", level: "75%", icon: "devicon-kotlin-plain" },
-        { name: "Node.js (Express & TS)", level: "80%", icon: "devicon-nodejs-plain" },
-        { name: "Prisma ORM & SQL (MySQL)", level: "85%", icon: "devicon-mysql-plain" },
-        { name: "MongoDB (NoSQL)", level: "70%", icon: "devicon-mongodb-plain" }
+        { 
+          name: "Python (FastAPI / Flask / Pandas)", 
+          level: "Avançado", 
+          icon: "devicon-python-plain",
+          desc: "Desenvolvimento de APIs REST robustas e análise, processamento e raspagem de dados estatísticos/demográficos."
+        },
+        { 
+          name: "Java (Fundamentals / Foundations)", 
+          level: "Proficiente", 
+          icon: "devicon-java-plain",
+          desc: "Domínio de Programação Orientada a Objetos (POO), manipulação de coleções, exceções e lógica avançada."
+        },
+        { 
+          name: "Kotlin (Android Development)", 
+          level: "Intermediário", 
+          icon: "devicon-kotlin-plain",
+          desc: "Desenvolvimento de aplicativos móveis nativos para a plataforma Android integrando serviços web."
+        },
+        { 
+          name: "Node.js (Express & TS)", 
+          level: "Intermediário", 
+          icon: "devicon-nodejs-plain",
+          desc: "Criação de servidores e roteamento assíncrono em TypeScript com organização de arquitetura modular."
+        },
+        { 
+          name: "Prisma ORM & SQL (MySQL)", 
+          level: "Avançado", 
+          icon: "devicon-mysql-plain",
+          desc: "Modelagem lógica relacional, escrita de queries SQL estruturadas e controle de versionamento do banco via migrations."
+        },
+        { 
+          name: "MongoDB (NoSQL)", 
+          level: "Familiar", 
+          icon: "devicon-mongodb-plain",
+          desc: "Estruturação e persistência de dados não relacionais (documentos) focados em flexibilidade de esquema."
+        }
       ]
     },
     {
       category: "Front-End & Interfaces",
       icon: "bi bi-layout-sidebar",
       items: [
-        { name: "React 19 & Vite", level: "85%", icon: "devicon-react-original" },
-        { name: "TypeScript", level: "80%", icon: "devicon-typescript-plain" },
-        { name: "JavaScript (ES6+)", level: "85%", icon: "devicon-javascript-plain" },
-        { name: "HTML5 & CSS3 / Vanilla CSS", level: "95%", icon: "devicon-html5-plain" },
-        { name: "Bootstrap (Layouts)", level: "90%", icon: "devicon-bootstrap-plain" }
+        { 
+          name: "React 19 & Vite", 
+          level: "Avançado", 
+          icon: "devicon-react-original",
+          desc: "Criação de Single Page Applications (SPAs) modulares e reativas com componentização avançada e roteamento dinâmico."
+        },
+        { 
+          name: "TypeScript", 
+          level: "Proficiente", 
+          icon: "devicon-typescript-plain",
+          desc: "Tipagem estática estrita para o desenvolvimento de aplicações mais seguras, previsíveis e fáceis de refatorar."
+        },
+        { 
+          name: "JavaScript (ES6+)", 
+          level: "Proficiente", 
+          icon: "devicon-javascript-plain",
+          desc: "Consumo assíncrono de APIs, manipulação do DOM e aplicação de paradigmas funcionais/orientados a objetos."
+        },
+        { 
+          name: "HTML5 & CSS3 / Vanilla CSS", 
+          level: "Avançado", 
+          icon: "devicon-html5-plain",
+          desc: "Construção de páginas web semânticas com design estruturado e flexível através de CSS Flexbox e CSS Grid."
+        },
+        { 
+          name: "Bootstrap (Layouts)", 
+          level: "Avançado", 
+          icon: "devicon-bootstrap-plain",
+          desc: "Criação ágil de telas e protótipos de interfaces totalmente responsivas com componentes utilitários modernos."
+        }
       ]
     },
     {
@@ -200,35 +255,17 @@ function renderSkills() {
         <h3 class="skills-card-title">${cat.category}</h3>
       </div>
       <div class="skills-list">
-        ${cat.items.map(s => {
-          if (s.desc) {
-            return `
-              <div class="soft-skill-item">
-                <div class="soft-skill-label">
-                  <span class="skill-name">
-                    ${s.icon ? `<i class="${s.icon} tech-icon"></i> ` : ''}${s.name}
-                  </span>
-                  ${s.level ? `<span class="skill-level-badge">${s.level}</span>` : ''}
-                </div>
-                <p class="soft-skill-desc">${s.desc}</p>
-              </div>
-            `;
-          } else {
-            return `
-              <div class="skill-item">
-                <div class="skill-label">
-                  <span class="skill-name">
-                    <i class="${s.icon} tech-icon"></i> ${s.name}
-                  </span>
-                  <span class="skill-percent">${s.level}</span>
-                </div>
-                <div class="skill-progress-bar">
-                  <div class="skill-progress-fill animate-progress" data-level="${s.level}"></div>
-                </div>
-              </div>
-            `;
-          }
-        }).join('')}
+        ${cat.items.map(s => `
+          <div class="soft-skill-item">
+            <div class="soft-skill-label">
+              <span class="skill-name">
+                ${s.icon ? `<i class="${s.icon} tech-icon"></i> ` : ''}${s.name}
+              </span>
+              ${s.level ? `<span class="skill-level-badge">${s.level}</span>` : ''}
+            </div>
+            <p class="soft-skill-desc">${s.desc}</p>
+          </div>
+        `).join('')}
       </div>
     </div>
   `).join('');
