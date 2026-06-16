@@ -74,5 +74,5 @@ Engenheiro de Software em Formação - FATEC São José dos Campos (2025 - 2028)
 
 - **LinkedIn:** [pedrochaim](https://www.linkedin.com/in/pedrochaim/)
 - **GitHub:** [@Spockchaim](https://github.com/Spockchaim)
-- **E-mail:** spockzenho@gmail.com
+- **E-mail:** pedro.chaim@outlook.com
 - **WhatsApp:** [+55 (12) 99158-3694](https://wa.me/5512991583694)
