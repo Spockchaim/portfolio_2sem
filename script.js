@@ -9,36 +9,56 @@ const PORTFOLIO_DATA = {
   },
   skills: [
     {
-      category: "Back-End & Database",
+      category: "Back-End & Engenharia de Dados",
       icon: "bi bi-database",
       items: [
-        { name: "Python (Flask / FastAPI)", level: "90%", icon: "devicon-python-plain" },
-        { name: "Java", level: "85%", icon: "devicon-java-plain" },
-        { name: "Kotlin", level: "75%", icon: "devicon-kotlin-plain" },
+        { name: "Python (FastAPI / Flask / Pandas)", level: "90%", icon: "devicon-python-plain" },
+        { name: "Java (Fundamentals / Foundations)", level: "85%", icon: "devicon-java-plain" },
+        { name: "Kotlin (Android Development)", level: "75%", icon: "devicon-kotlin-plain" },
         { name: "Node.js (Express & TS)", level: "80%", icon: "devicon-nodejs-plain" },
-        { name: "Prisma ORM & SQL (MySQL)", level: "80%", icon: "devicon-mysql-plain" },
-        { name: "MongoDB", level: "70%", icon: "devicon-mongodb-plain" },
-        { name: "Docker & AWS (EC2 / RDS)", level: "70%", icon: "devicon-docker-plain" }
+        { name: "Prisma ORM & SQL (MySQL)", level: "85%", icon: "devicon-mysql-plain" },
+        { name: "MongoDB (NoSQL)", level: "70%", icon: "devicon-mongodb-plain" }
       ]
     },
     {
-      category: "Front-End Development",
+      category: "Front-End & Interfaces",
       icon: "bi bi-layout-sidebar",
       items: [
-        { name: "React 19 & Vite", level: "80%", icon: "devicon-react-original" },
+        { name: "React 19 & Vite", level: "85%", icon: "devicon-react-original" },
         { name: "TypeScript", level: "80%", icon: "devicon-typescript-plain" },
+        { name: "JavaScript (ES6+)", level: "85%", icon: "devicon-javascript-plain" },
         { name: "HTML5 & CSS3 / Vanilla CSS", level: "95%", icon: "devicon-html5-plain" },
-        { name: "Bootstrap", level: "90%", icon: "devicon-bootstrap-plain" },
-        { name: "JavaScript (ES6+)", level: "85%", icon: "devicon-javascript-plain" }
+        { name: "Bootstrap (Layouts)", level: "90%", icon: "devicon-bootstrap-plain" }
       ]
     },
     {
-      category: "Soft Skills",
-      icon: "bi bi-people",
+      category: "Práticas, Nuvem & Metodologias",
+      icon: "bi bi-gear-fill",
       items: [
-        { name: "Comunicação", level: "95%", desc: "Clara, objetiva e empática com escuta ativa." },
-        { name: "Auto Gerência", level: "90%", desc: "Foco em entregas rápidas de alta qualidade." },
-        { name: "Busca de Conhecimento", level: "95%", desc: "Curiosidade intelectual para novas tecnologias." }
+        { 
+          name: "Metodologia Scrum", 
+          level: "Avançado", 
+          icon: "bi bi-people-fill",
+          desc: "Experiência prática como Scrum Master liderando equipes na API do 2º Semestre em parceria com a Akaer." 
+        },
+        { 
+          name: "Git & Versionamento", 
+          level: "Avançado", 
+          icon: "devicon-git-plain",
+          desc: "Controle de fluxo de trabalho Git Flow e gerenciamento de branches em repositórios corporativos." 
+        },
+        { 
+          name: "Docker & AWS", 
+          level: "Intermediário", 
+          icon: "devicon-docker-plain",
+          desc: "Conteinerização de microserviços e deploy em nuvem utilizando instâncias EC2 e bancos relacionais RDS." 
+        },
+        { 
+          name: "Deploy & CI/CD", 
+          level: "Intermediário", 
+          icon: "bi bi-cloud-arrow-up-fill",
+          desc: "Hospedagem e configuração de deploys contínuos na Vercel e automações básicas do GitHub." 
+        }
       ]
     }
   ],
@@ -121,7 +141,7 @@ const PORTFOLIO_DATA = {
       date: "Fev 2024",
       inst: "SENAC",
       desc: "Fundamentos de HTML5, CSS3, controle de versão Git/GitHub e automação web.",
-      link: "https://portfolio-lovat-beta-35.vercel.app/img/certificados/front_senac.pdf"
+      link: "https://portfolio-lovat-beta-35.vercel.app/img/cv/cv.pdf"
     },
     {
       title: "Scrum - FGV",
@@ -181,12 +201,14 @@ function renderSkills() {
       </div>
       <div class="skills-list">
         ${cat.items.map(s => {
-          if (cat.category === "Soft Skills") {
+          if (s.desc) {
             return `
               <div class="soft-skill-item">
                 <div class="soft-skill-label">
-                  <span class="skill-name">${s.name}</span>
-                  <span class="skill-level-badge">${s.level}</span>
+                  <span class="skill-name">
+                    ${s.icon ? `<i class="${s.icon} tech-icon"></i> ` : ''}${s.name}
+                  </span>
+                  ${s.level ? `<span class="skill-level-badge">${s.level}</span>` : ''}
                 </div>
                 <p class="soft-skill-desc">${s.desc}</p>
               </div>
