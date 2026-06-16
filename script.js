@@ -50,6 +50,12 @@ const PORTFOLIO_DATA = {
       github: "https://github.com/Spockchaim/API_ADS_6SEMESTE_2025.1"
     },
     {
+      title: "JanoSys Akaer (API FATEC - 2º Semestre)",
+      desc: "Sistema de catalogação, busca e auditoria de normas técnicas de engenharia aeroespacial desenvolvido em parceria com a Akaer. Permite o controle de revisões, histórico de alterações por normas e gerenciamento de permissões baseadas em papéis (RBAC). Atuei como Scrum Master e Desenvolvedor.",
+      stack: ["React", "TypeScript", "Vite", "Bootstrap", "Scrum"],
+      github: "https://github.com/janosystime/Janosys-Project-1-Akaer"
+    },
+    {
       title: "Aerocode Industrial Systems v3.0 (AV3)",
       desc: "Evolução do Aerocode para Full-Stack. Sistema para gestão de frotas e peças com persistência relacional. Apresenta um painel Kanban FIFO com travas lógicas e um módulo científico de medição de performance de concorrência com gráficos.",
       stack: ["React 19", "TypeScript", "Node.js", "Express", "Prisma ORM", "MySQL"],
