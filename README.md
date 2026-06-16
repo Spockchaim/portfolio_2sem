@@ -2,7 +2,7 @@
 
 Este repositório contém o portfólio acadêmico e profissional de **Pedro Chaim**, desenvolvido como uma Landing Page Single Page Application (SPA) moderna, de alta performance e totalmente responsiva.
 
-👉 **Veja online:** (Insira a URL de deploy aqui, ex: GitHub Pages ou Vercel)
+👉 **Veja online:** [spockchaim.github.io/portfolio_2sem](https://spockchaim.github.io/portfolio_2sem/)
 
 ---
 
