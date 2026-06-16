@@ -41,12 +41,6 @@ const PORTFOLIO_DATA = {
           level: "Intermediário", 
           icon: "devicon-mysql-plain",
           desc: "Criação de tabelas, relacionamentos e consultas SQL com MySQL intermediadas pelo Prisma ORM em projetos de avaliação."
-        },
-        { 
-          name: "MongoDB (NoSQL)", 
-          level: "Familiar", 
-          icon: "devicon-mongodb-plain",
-          desc: "Conceitos básicos de modelagem de dados orientada a documentos, aplicados em projetos integradores em grupo."
         }
       ]
     },
@@ -118,12 +112,6 @@ const PORTFOLIO_DATA = {
     }
   ],
   projects: [
-    {
-      title: "Auxia (API FATEC - 6º Semestre)",
-      desc: "Assistente de Inteligência Artificial para avaliações e tomada de decisões corporativas baseadas em LLMs e bancos de dados vetoriais locais (RAG). Desenvolvido em equipe usando controle de acesso (RBAC), histórico de auditoria e integração com IA.",
-      stack: ["Python", "FastAPI", "React", "MongoDB", "Poetry", "LLM"],
-      github: "https://github.com/Spockchaim/API_ADS_6SEMESTE_2025.1"
-    },
     {
       title: "JanoSys Akaer (API FATEC - 2º Semestre)",
       desc: "Sistema de catalogação, busca e auditoria de normas técnicas de engenharia aeroespacial desenvolvido em parceria com a Akaer. Permite o controle de revisões, histórico de alterações por normas e gerenciamento de permissões baseadas em papéis (RBAC). Atuei como Scrum Master e Desenvolvedor.",
@@ -228,7 +216,7 @@ const PORTFOLIO_DATA = {
     },
     {
       title: "PyDay #1",
-      desc: "Evento local promovido pela comunidade PythonSJC com foco no compartilhamento de experiências em Python, ciência de dados e engenharia de dados na região.",
+      desc: "Evento local promovido pela comunidade PythonSJC com foco no compartilhamento de experiências in Python, ciência de dados e engenharia de dados na região.",
       date: "2025",
       image: "img/pyday1.jpeg"
     },
