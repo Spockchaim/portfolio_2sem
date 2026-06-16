@@ -9,24 +9,27 @@ const PORTFOLIO_DATA = {
   },
   skills: [
     {
-      category: "Back-End Development",
+      category: "Back-End & Database",
       icon: "bi bi-database",
       items: [
-        { name: "Python", level: "90%", icon: "devicon-python-plain" },
+        { name: "Python (Flask / FastAPI)", level: "90%", icon: "devicon-python-plain" },
         { name: "Java", level: "85%", icon: "devicon-java-plain" },
         { name: "Kotlin", level: "75%", icon: "devicon-kotlin-plain" },
-        { name: "Docker", level: "70%", icon: "devicon-docker-plain" },
-        { name: "AWS (EC2 & RDS)", level: "65%", icon: "devicon-amazonwebservices-plain-wordmark" }
+        { name: "Node.js (Express & TS)", level: "80%", icon: "devicon-nodejs-plain" },
+        { name: "Prisma ORM & SQL (MySQL)", level: "80%", icon: "devicon-mysql-plain" },
+        { name: "MongoDB", level: "70%", icon: "devicon-mongodb-plain" },
+        { name: "Docker & AWS (EC2 / RDS)", level: "70%", icon: "devicon-docker-plain" }
       ]
     },
     {
       category: "Front-End Development",
       icon: "bi bi-layout-sidebar",
       items: [
-        { name: "HTML5", level: "95%", icon: "devicon-html5-plain" },
-        { name: "CSS3 / Vanilla CSS", level: "90%", icon: "devicon-css3-plain" },
-        { name: "JavaScript (ES6+)", level: "80%", icon: "devicon-javascript-plain" },
-        { name: "Bootstrap", level: "85%", icon: "devicon-bootstrap-plain" }
+        { name: "React 19 & Vite", level: "80%", icon: "devicon-react-original" },
+        { name: "TypeScript", level: "80%", icon: "devicon-typescript-plain" },
+        { name: "HTML5 & CSS3 / Vanilla CSS", level: "95%", icon: "devicon-html5-plain" },
+        { name: "Bootstrap", level: "90%", icon: "devicon-bootstrap-plain" },
+        { name: "JavaScript (ES6+)", level: "85%", icon: "devicon-javascript-plain" }
       ]
     },
     {
@@ -41,22 +44,48 @@ const PORTFOLIO_DATA = {
   ],
   projects: [
     {
-      title: "JanoSys IBGE",
-      desc: "Projeto para representação e análise de dados do IBGE referentes à cidade de São José dos Campos (SP). Atuação focada no backend, realizando raspagem de dados com Pandas e geração de gráficos interativos com Plotly integrado ao Flask.",
+      title: "Auxia (API FATEC - 6º Semestre)",
+      desc: "Assistente de Inteligência Artificial para avaliações e tomada de decisões corporativas baseadas em LLMs e bancos de dados vetoriais locais (RAG). Desenvolvido em equipe usando controle de acesso (RBAC), histórico de auditoria e integração com IA.",
+      stack: ["Python", "FastAPI", "React", "MongoDB", "Poetry", "LLM"],
+      github: "https://github.com/Spockchaim/API_ADS_6SEMESTE_2025.1"
+    },
+    {
+      title: "Aerocode Industrial Systems v3.0 (AV3)",
+      desc: "Evolução do Aerocode para Full-Stack. Sistema para gestão de frotas e peças com persistência relacional. Apresenta um painel Kanban FIFO com travas lógicas e um módulo científico de medição de performance de concorrência com gráficos.",
+      stack: ["React 19", "TypeScript", "Node.js", "Express", "Prisma ORM", "MySQL"],
+      github: "https://github.com/Spockchaim/AV3",
+      demo: "https://av-2-chaim.vercel.app"
+    },
+    {
+      title: "Aerocode Industrial Systems v2.0 (AV2)",
+      desc: "Dashboard interativo (SPA) para gerenciamento de frotas de manutenção aeroespacial. Contém um Kanban para linha de montagem com travas FIFO lógicas, relatórios e geração de laudos de aeronavegabilidade.",
+      stack: ["React 19", "TypeScript", "Vite", "React Router 7", "LocalStorage"],
+      github: "https://github.com/Spockchaim/AV2",
+      demo: "https://av-2-chaim.vercel.app"
+    },
+    {
+      title: "Aerocode CLI (AV1)",
+      desc: "Sistema robusto em interface CLI para controle de ciclo de manufatura de aeronaves. Implementa autenticação RBAC, controle de estoque de peças importadas/nacionais e persistência em arquivos JSON simulando banco relacional.",
+      stack: ["TypeScript", "Node.js", "POO", "Generics", "JSON"],
+      github: "https://github.com/Spockchaim/AV1"
+    },
+    {
+      title: "JanoSys IBGE (API FATEC - 1º Semestre)",
+      desc: "Plataforma de visualização e análise de dados demográficos e econômicos do IBGE para São José dos Campos (SP). Minha atuação focou no backend com raspagem de dados via Pandas e geração de gráficos estatísticos interativos via Plotly.",
       stack: ["Python", "Flask", "Pandas", "Plotly", "Bootstrap"],
       github: "https://github.com/janosystime/Janosys-Project",
       demo: "https://janosys-project-api1.vercel.app/"
     },
     {
       title: "Clube do Milho",
-      desc: "Website desenvolvido com o intuito de consolidar fundamentos práticos de desenvolvimento front-end estruturado, estilização avançada e responsividade nativa.",
+      desc: "Landing page responsiva desenvolvida para fins de estudo e consolidação de boas práticas de estruturação HTML5 e estilização avançada com CSS3 e Bootstrap.",
       stack: ["HTML5", "CSS3", "Bootstrap", "GitHub"],
       github: "https://github.com/Spockchaim/Clube_do_Milho",
       demo: "https://clube-do-milho.vercel.app/"
     },
     {
       title: "Bar Buraco-do-Tatu",
-      desc: "Interface institucional e cardápio interativo para um bar temático. Focado na experiência do usuário e layouts responsivos baseados em frameworks CSS modernos.",
+      desc: "Website conceitual para um bar temático contendo cardápio digital dinâmico e interface responsiva otimizada para dispositivos móveis.",
       stack: ["HTML5", "CSS3", "Bootstrap", "GitHub"],
       github: "https://github.com/Spockchaim/bar-buraco-do-tatu",
       demo: "https://bar-buraco-do-tatu.vercel.app"
@@ -79,7 +108,7 @@ const PORTFOLIO_DATA = {
       title: "Desenvolvimento para Android",
       date: "Jun 2024",
       inst: "SENAI",
-      desc: "Criação de aplicativos nativos utilizando Kotlin, Android SDK, layouts e consumo de serviços Web."
+      desc: "Criação de aplicativos nativas utilizando Kotlin, Android SDK, layouts e consumo de serviços Web."
     },
     {
       title: "Front-End Senac",
@@ -92,14 +121,14 @@ const PORTFOLIO_DATA = {
       title: "Scrum - FGV",
       date: "Ago 2025",
       inst: "Fundação Getulio Vargas",
-      desc: "Gerenciamento de projetos ágeis, papéis do Scrum, eventos (sprints, dailies, reviews) e artefatos.",
+      desc: "Metodologias ágeis e gerenciamento de projetos através do framework Scrum.",
       link: "https://portfolio-lovat-beta-35.vercel.app/img/certificados/scrum_fgv.pdf"
     },
     {
       title: "Escola de Inovadores - CTPS",
       date: "Out 2025",
       inst: "Centro Paula Souza",
-      desc: "Empreendedorismo, inovação, modelagem de negócios com Canvas, validação e pitch técnico.",
+      desc: "Capacitação em empreendedorismo, inovação e estruturação de novos modelos de negócios.",
       link: "https://portfolio-lovat-beta-35.vercel.app/img/certificados/inovadores_cps.pdf"
     }
   ],
@@ -227,6 +256,7 @@ function renderCertificates() {
   `).join('');
 }
 
+// Render Events
 function renderEvents() {
   const container = document.getElementById("events-container");
   if (!container) return;
