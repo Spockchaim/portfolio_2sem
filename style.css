@@ -1,33 +1,36 @@
 /* ==========================================================================
-   MODERN AURORA TECH PORTFOLIO - STYLE SYSTEM
+   DARK PETROLEUM TECH PORTFOLIO - STYLE SYSTEM
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root {
-  /* Color Palette - Modern Tech Dark with Aurora Accents */
-  --bg-primary: #05050a;          /* Rich space obsidian */
-  --bg-secondary: #090915;        /* Deep navy-black */
-  --bg-surface: rgba(13, 13, 29, 0.45);
-  --bg-card: rgba(18, 18, 38, 0.55);
+  /* Color Palette - Sophisticated Dark Petroleum Blue & Mint Teal */
+  --bg-primary: #010a12;          /* Deepest petroleum black-blue */
+  --bg-secondary: #031525;        /* Deep petroleum navy */
+  --bg-surface: rgba(4, 25, 45, 0.5); /* Petroleum glass surface */
+  --bg-card: rgba(6, 33, 58, 0.6);   /* Elegant petroleum card */
   
-  --color-primary: #3b82f6;       /* Electric Blue */
-  --color-secondary: #8b5cf6;     /* Aurora Purple */
-  --color-accent: #06b6d4;        /* Cyber Teal */
+  --color-primary: #00d2c4;       /* Vivid Petroleum Teal-Cyan */
+  --color-primary-rgb: 0, 210, 196;
+  --color-secondary: #007f8c;     /* Deep Petroleum Teal */
+  --color-secondary-rgb: 0, 127, 140;
+  --color-accent: #00f5d4;        /* Cyber Mint Teal */
+  --color-accent-rgb: 0, 245, 212;
   
-  --text-primary: #f8fafc;        /* Slate 50 */
-  --text-secondary: #cbd5e1;      /* Slate 300 */
-  --text-muted: #64748b;          /* Slate 500 */
+  --text-primary: #eef8fc;        /* Light icy blue-slate */
+  --text-secondary: #b8ccd6;      /* Muted petroleum silver */
+  --text-muted: #5f8091;          /* Slate teal-grey */
   
-  --border-glow: rgba(59, 130, 246, 0.25);
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 210, 196, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.06);
   
   --font-headings: 'Outfit', 'Inter', sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   --glass-blur: blur(16px);
-  --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
-  --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.15);
+  --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 0 35px rgba(0, 210, 196, 0.15);
   
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
@@ -63,7 +66,7 @@ body {
 }
 
 /* ==========================================================================
-   GLOWING BACKGROUND DECORATIONS (Vibrant, soft space glow)
+   GLOWING BACKGROUND DECORATIONS (Deep petroleum & teal spotlight)
    ========================================================================== */
 .glow-bg-container {
   position: fixed;
@@ -79,8 +82,8 @@ body {
 .glow-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(130px);
-  opacity: 0.12;
+  filter: blur(140px);
+  opacity: 0.1;
   mix-blend-mode: screen;
   animation: float 25s infinite alternate;
 }
@@ -179,7 +182,7 @@ section {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 12px; /* Modern slightly rounded corners */
+  border-radius: 12px;
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -189,12 +192,12 @@ section {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: #fff;
   border: none;
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 4px 20px rgba(var(--color-secondary-rgb), 0.25);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45), var(--shadow-glow);
+  box-shadow: 0 8px 30px rgba(var(--color-secondary-rgb), 0.45), var(--shadow-glow);
 }
 
 .btn-secondary {
@@ -240,7 +243,7 @@ section {
 }
 
 .header-scrolled {
-  background: rgba(5, 5, 10, 0.8);
+  background: rgba(1, 10, 18, 0.85);
   backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--border-subtle);
   padding: 1rem 0;
@@ -318,8 +321,8 @@ section {
   font-size: 0.85rem;
   font-weight: 700;
   color: #fff;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(var(--color-secondary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-secondary-rgb), 0.3);
   padding: 0.5rem 1.25rem;
   border-radius: 10px;
   text-decoration: none;
@@ -330,10 +333,10 @@ section {
 }
 
 .nav-cta:hover {
-  background: rgba(59, 130, 246, 0.25);
+  background: rgba(var(--color-secondary-rgb), 0.25);
   border-color: var(--color-primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 15px rgba(var(--color-secondary-rgb), 0.2);
 }
 
 .menu-toggle {
@@ -366,8 +369,8 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(var(--color-secondary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-secondary-rgb), 0.2);
   padding: 0.4rem 1.1rem;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -383,14 +386,14 @@ section {
   background-color: var(--color-accent);
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
   animation: pulse 1.8s infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
-  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
 .hero-title {
@@ -417,7 +420,7 @@ section {
   flex-wrap: wrap;
 }
 
-/* Profile Image Styling with Neon Grid Glow */
+/* Profile Image Styling with Petroleum Grid Glow */
 .profile-card-wrapper {
   position: relative;
   z-index: 1;
@@ -440,7 +443,7 @@ section {
 
 .profile-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.35);
+  border-color: rgba(var(--color-secondary-rgb), 0.35);
   box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8), var(--shadow-glow);
 }
 
@@ -458,7 +461,7 @@ section {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(5, 5, 15, 0.8);
+  background: rgba(1, 10, 18, 0.85);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 0.75rem 1.25rem;
@@ -548,7 +551,7 @@ section {
 
 .info-badge:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: rgba(var(--color-secondary-rgb), 0.3);
   transform: translateY(-4px);
 }
 
@@ -650,7 +653,7 @@ section {
 }
 
 /* ==========================================================================
-   3. HABILIDADES SECTION (Vibrant cards)
+   3. HABILIDADES SECTION
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -669,7 +672,7 @@ section {
 }
 
 .skills-card:hover {
-  border-color: rgba(139, 92, 246, 0.25);
+  border-color: rgba(var(--color-secondary-rgb), 0.25);
   box-shadow: 0 15px 40px -10px rgba(0,0,0,0.8);
 }
 
@@ -685,7 +688,7 @@ section {
 .skills-icon-box {
   width: 45px;
   height: 45px;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(var(--color-secondary-rgb), 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -718,7 +721,7 @@ section {
 
 .soft-skill-item:hover {
   background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(var(--color-secondary-rgb), 0.2);
   transform: translateX(4px);
 }
 
@@ -748,8 +751,8 @@ section {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-accent);
-  background: rgba(6, 182, 212, 0.12);
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   padding: 0.25rem 0.6rem;
   border-radius: 50px;
 }
@@ -784,7 +787,7 @@ section {
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: rgba(var(--color-secondary-rgb), 0.35);
   box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8), var(--shadow-glow);
 }
 
@@ -820,8 +823,8 @@ section {
 }
 
 .tech-tag {
-  background: rgba(59, 130, 246, 0.05);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: rgba(var(--color-secondary-rgb), 0.05);
+  border: 1px solid rgba(var(--color-secondary-rgb), 0.15);
   color: var(--color-primary);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -833,7 +836,7 @@ section {
 .project-card:hover .tech-tag {
   border-color: var(--color-secondary);
   color: var(--text-primary);
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(var(--color-secondary-rgb), 0.1);
 }
 
 .project-links {
@@ -882,7 +885,7 @@ section {
 
 .certificate-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.25);
+  border-color: rgba(var(--color-secondary-rgb), 0.25);
   box-shadow: 0 15px 40px -10px rgba(0,0,0,0.8);
 }
 
@@ -943,7 +946,7 @@ section {
 }
 
 /* ==========================================================================
-   6. EVENTOS SECTION (Vibrant colors returned)
+   6. EVENTOS SECTION
    ========================================================================== */
 .events-grid {
   display: grid;
@@ -965,8 +968,8 @@ section {
 
 .event-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(139, 92, 246, 0.35);
-  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8), 0 0 25px rgba(139, 92, 246, 0.2);
+  border-color: rgba(var(--color-secondary-rgb), 0.35);
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8), 0 0 25px rgba(var(--color-secondary-rgb), 0.2);
 }
 
 .event-img-wrapper {
@@ -991,7 +994,7 @@ section {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(5, 5, 15, 0.85);
+  background: rgba(1, 10, 18, 0.85);
   border: 1px solid var(--border-subtle);
   color: #fff;
   font-family: var(--font-headings);
@@ -1066,7 +1069,7 @@ section {
 }
 
 .contact-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(var(--color-secondary-rgb), 0.45);
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
@@ -1074,7 +1077,7 @@ section {
 .contact-icon-box {
   width: 50px;
   height: 50px;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(var(--color-secondary-rgb), 0.1);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -1154,7 +1157,7 @@ section {
 .contact-form textarea:focus {
   border-color: var(--color-secondary);
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 15px rgba(var(--color-secondary-rgb), 0.15);
 }
 
 .contact-form input::placeholder,
@@ -1171,7 +1174,7 @@ section {
    FOOTER
    ========================================================================== */
 .footer {
-  background: #030308;
+  background: #01070e;
   border-top: 1px solid var(--border-subtle);
   padding: 5rem 0;
 }
@@ -1278,7 +1281,7 @@ section {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(5, 5, 10, 0.95);
+    background: rgba(1, 10, 18, 0.95);
     backdrop-filter: blur(25px);
     border-left: 1px solid var(--border-subtle);
     flex-direction: column;
