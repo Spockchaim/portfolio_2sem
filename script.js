@@ -13,40 +13,40 @@ const PORTFOLIO_DATA = {
       icon: "bi bi-database",
       items: [
         { 
-          name: "Python (FastAPI / Flask / Pandas)", 
-          level: "Avançado", 
+          name: "Python (Flask / Pandas)", 
+          level: "Intermediário", 
           icon: "devicon-python-plain",
-          desc: "Desenvolvimento de APIs REST robustas e análise, processamento e raspagem de dados estatísticos/demográficos."
+          desc: "Utilizado na prática para desenvolvimento de APIs básicas (Flask) e análise/raspagem de dados demográficos (Pandas/Plotly) em projetos acadêmicos."
         },
         { 
           name: "Java (Fundamentals / Foundations)", 
-          level: "Proficiente", 
+          level: "Fundamentos", 
           icon: "devicon-java-plain",
-          desc: "Domínio de Programação Orientada a Objetos (POO), manipulação de coleções, exceções e lógica avançada."
+          desc: "Conhecimento teórico e prático adquirido em cursos de extensão da Oracle (SENAC), cobrindo Lógica de Programação e Orientação a Objetos (POO)."
         },
         { 
-          name: "Kotlin (Android Development)", 
-          level: "Intermediário", 
+          name: "Kotlin (Android)", 
+          level: "Fundamentos", 
           icon: "devicon-kotlin-plain",
-          desc: "Desenvolvimento de aplicativos móveis nativos para a plataforma Android integrando serviços web."
+          desc: "Estudo de desenvolvimento mobile nativo para a plataforma Android por meio de curso profissionalizante realizado no SENAI."
         },
         { 
           name: "Node.js (Express & TS)", 
-          level: "Intermediário", 
+          level: "Familiar", 
           icon: "devicon-nodejs-plain",
-          desc: "Criação de servidores e roteamento assíncrono em TypeScript com organização de arquitetura modular."
+          desc: "Estruturação de rotas de APIs e controle de fluxo assíncrono em TypeScript em projetos de avaliação da faculdade."
         },
         { 
           name: "Prisma ORM & SQL (MySQL)", 
-          level: "Avançado", 
+          level: "Intermediário", 
           icon: "devicon-mysql-plain",
-          desc: "Modelagem lógica relacional, escrita de queries SQL estruturadas e controle de versionamento do banco via migrations."
+          desc: "Criação de tabelas, relacionamentos e consultas SQL com MySQL intermediadas pelo Prisma ORM em projetos de avaliação."
         },
         { 
           name: "MongoDB (NoSQL)", 
           level: "Familiar", 
           icon: "devicon-mongodb-plain",
-          desc: "Estruturação e persistência de dados não relacionais (documentos) focados em flexibilidade de esquema."
+          desc: "Conceitos básicos de modelagem de dados orientada a documentos, aplicados em projetos integradores em grupo."
         }
       ]
     },
@@ -55,34 +55,34 @@ const PORTFOLIO_DATA = {
       icon: "bi bi-layout-sidebar",
       items: [
         { 
-          name: "React 19 & Vite", 
-          level: "Avançado", 
+          name: "React & Vite", 
+          level: "Intermediário", 
           icon: "devicon-react-original",
-          desc: "Criação de Single Page Applications (SPAs) modulares e reativas com componentização avançada e roteamento dinâmico."
+          desc: "Desenvolvimento de interfaces dinâmicas (SPAs) e componentização reativa aplicadas nos projetos Aerocode (AV2/AV3) e Akaer."
         },
         { 
           name: "TypeScript", 
-          level: "Proficiente", 
+          level: "Intermediário", 
           icon: "devicon-typescript-plain",
-          desc: "Tipagem estática estrita para o desenvolvimento de aplicações mais seguras, previsíveis e fáceis de refatorar."
+          desc: "Uso de tipagem para organização e segurança do código, com aplicação prática em projetos CLI e Web."
         },
         { 
           name: "JavaScript (ES6+)", 
-          level: "Proficiente", 
+          level: "Intermediário", 
           icon: "devicon-javascript-plain",
-          desc: "Consumo assíncrono de APIs, manipulação do DOM e aplicação de paradigmas funcionais/orientados a objetos."
+          desc: "Lógica de programação para web, manipulação básica de DOM, eventos e consumo de APIs utilizando Fetch."
         },
         { 
-          name: "HTML5 & CSS3 / Vanilla CSS", 
-          level: "Avançado", 
+          name: "HTML5 & CSS3", 
+          level: "Prático", 
           icon: "devicon-html5-plain",
-          desc: "Construção de páginas web semânticas com design estruturado e flexível através de CSS Flexbox e CSS Grid."
+          desc: "Estruturação semântica de páginas e estilização responsiva flexível utilizando CSS Flexbox e Grid."
         },
         { 
           name: "Bootstrap (Layouts)", 
-          level: "Avançado", 
+          level: "Prático", 
           icon: "devicon-bootstrap-plain",
-          desc: "Criação ágil de telas e protótipos de interfaces totalmente responsivas com componentes utilitários modernos."
+          desc: "Uso do framework para estilização ágil e adaptação rápida de layouts responsivos em múltiplos projetos de estudo."
         }
       ]
     },
@@ -92,27 +92,27 @@ const PORTFOLIO_DATA = {
       items: [
         { 
           name: "Metodologia Scrum", 
-          level: "Avançado", 
+          level: "Scrum Master Acadêmico", 
           icon: "bi bi-people-fill",
-          desc: "Experiência prática como Scrum Master liderando equipes na API do 2º Semestre em parceria com a Akaer." 
+          desc: "Atuação no papel de Scrum Master facilitando rituais, organizando o backlog e as sprints da equipe na API Akaer do 2º Semestre." 
         },
         { 
-          name: "Git & Versionamento", 
-          level: "Avançado", 
+          name: "Git & GitHub", 
+          level: "Prático", 
           icon: "devicon-git-plain",
-          desc: "Controle de fluxo de trabalho Git Flow e gerenciamento de branches em repositórios corporativos." 
+          desc: "Uso contínuo para controle de versão, histórico de commits e colaboração em equipe utilizando branches." 
         },
         { 
           name: "Docker & AWS", 
-          level: "Intermediário", 
+          level: "Familiar", 
           icon: "devicon-docker-plain",
-          desc: "Conteinerização de microserviços e deploy em nuvem utilizando instâncias EC2 e bancos relacionais RDS." 
+          desc: "Estudo e aplicação básica de conteinerização (Dockerfiles) e deploy básico de instâncias na nuvem AWS (EC2/RDS)." 
         },
         { 
-          name: "Deploy & CI/CD", 
-          level: "Intermediário", 
+          name: "Deploy & Hospedagem", 
+          level: "Prático", 
           icon: "bi bi-cloud-arrow-up-fill",
-          desc: "Hospedagem e configuração de deploys contínuos na Vercel e automações básicas do GitHub." 
+          desc: "Hospedagem e configuração de deploys automáticos de páginas estáticas e SPAs na plataforma Vercel." 
         }
       ]
     }
